@@ -1,7 +1,13 @@
 terraform {
-  required_version = ">= 0.12"
+  required_version = ">= 0.13"
 
   required_providers {
-    mysql = ">= 1.6.0"
+    mysql = {
+      source  = "terraform-providers/mysql"
+      version = ">= 1.6.0"
+    }
+    random = {
+      source = "hashicorp/random"
+    }
   }
 }
